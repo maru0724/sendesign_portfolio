@@ -1,0 +1,129 @@
+@use 'mixin' as *;
+@use 'variables' as *;
+
+/* ヘッダー共通 */
+.header {
+    background-color: $accentcolor1;
+
+    .header__inner {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 60px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    z-index: 50;
+    background-color: $accentcolor1;
+    }
+
+    .header__nav {
+        /* PC/タブレットでは常に表示（縦並び） */
+        display: flex;
+    }
+
+    .header__nav-list {
+        display: flex;
+        gap: 40px;
+    }
+
+    .header__nav-item a {
+        color: $accentcolor2;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 20px;
+        font-weight: 300;
+        transition: transform 0.3s;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+
+  /* ハンバーガーボタンはデフォルト非表示（PC/タブレット） */
+    .menu-button {
+        display: none;
+    }
+    }
+
+/* ------------------ スマホ用 ------------------ */
+@media (max-width: 767px) {
+    .header {
+        .header__inner {
+            justify-content: flex-end;
+            padding: 0 20px;
+        }
+
+        .menu-button {
+            display: block;
+            width: 30px;
+            height: 25px;
+            position: relative;
+            cursor: pointer;
+            border: none;
+            background: none;
+            z-index: 1001;
+
+            .menu-button__line,
+            .menu-button__line::before,
+            .menu-button__line::after {
+                content: "";
+                display: block;
+                width: 100%;
+                height: 1.5px;
+                background: $accentcolor2;
+                position: absolute;
+                transition: 0.3s;
+            }
+
+            .menu-button__line {
+                top: 50%;
+                transform: translateY(-50%);
+            }
+
+            .menu-button__line::before {
+                top: -8px;
+            }
+
+            .menu-button__line::after {
+                top: 8px;
+            }
+
+            &.is-open .menu-button__line {
+                background: transparent;
+            }
+            &.is-open .menu-button__line::before {
+                transform: rotate(45deg);
+                top: 0;
+            }
+            &.is-open .menu-button__line::after {
+                transform: rotate(-45deg);
+                top: 0;
+            }
+        }
+
+        .header__nav {
+            display: none; /* デフォルト非表示 */
+            position: absolute;
+            top: 60px;
+            left: 0;
+            width: 100%;
+            background: #fff;
+            border-top: 1px solid #ddd;
+            padding: 20px 0;
+            z-index: 1000;
+
+            .header__nav-list {
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+            }
+
+            &.is-open {
+                display: block;
+            }
+        }
+    }
+}

@@ -1,0 +1,60 @@
+@use 'variables' as *;
+@use 'mixin' as *;
+
+body {
+    font-family: $roboto, $sans, $ooohbaby;
+    color: $textcolor1;
+    background-color: $bgcolor1;
+}
+
+h1 {
+    font-size: 80px;
+    font-weight: 300;
+
+    @include mq-max(md) {
+    font-size: 56px;
+    }
+}
+
+h2 {
+    font-size: 48px;
+    font-weight: 300;
+
+    @include mq-max(md) {
+    font-size: 40px;
+    }
+}
+
+h3 {
+    font-size: 20px;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.8;
+
+    @include mq-max(md) {
+            font-size: 12px;
+        }
+}
+
+li {
+    list-style: none;
+}
+
+.section {
+    padding: 160px 120px;
+    
+    @include mq-max(md) {
+        padding: 120px 80px; // さらに狭める
+    }
+
+    @include mq-max(sm) {
+        padding: 80px 40px;
+    }
+}
+
+.contents-container{
+    max-width: 960px;
+    margin: 0 auto;
+}

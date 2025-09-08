@@ -1,0 +1,24 @@
+// Text Colors
+$textcolor1: #333;
+$textcolor2: #fff;
+// Background Colors
+$bgcolor1: #fff;
+$bgcolor2: #FFF6E9;
+// Accent Colors
+$accentcolor1: #FFCC83;
+$accentcolor2: #25476C;
+// Overlay Color
+$overlaycolor1: rgba(255, 204, 131, 0.8);
+$overlaycolor2: rgba(255, 255, 255, 0.88);
+
+// Font Variables
+$roboto: "Roboto";
+$sans: "Noto Sans JP";
+$ooohbaby: "Oooh Baby", cursive;
+
+// variables.scss
+$breakpoints: (
+    sm: 480px,
+    md: 768px,
+    lg: 1024px,
+);

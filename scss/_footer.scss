@@ -1,0 +1,17 @@
+@use 'variables' as *;
+@use 'mixin' as *;
+
+.footer {
+    background-color: $accentcolor1;
+    text-align: center;
+    padding: 46px 0;
+    
+    @include mq-max(md) {
+        padding: 12px 0;
+    }
+
+    &__text {
+        color: $textcolor2;
+    }
+
+}

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sen design portfolio</title>
+
+    <!-- リセットCSS -->
+    <link rel="stylesheet" href="https://unpkg.com/destyle.css@4.0.1/destyle.min.css" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Oooh+Baby&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="css/style.css" />
+    </head>
+    <body>
+    <!-- モーダル -->
+    <div id="modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <div class="modal-content">
+        <button class="close-btn" type="button" aria-label="閉じる">&times;</button>
+        <div class="modal-body">
+            <div class="modal-img-container" id="modal-img-container">
+            <img id="modal-image" src="" alt="" />
+            </div>
+
+            <div class="modal-info-container">
+            <h3 id="modal-title" class="modal-title">作品タイトル</h3>
+
+            <h4 class="modal-info-heading">デザイン・制作</h4>
+            <p id="modal-tools" class="modal-info-text"></p>
+
+            <h4 class="modal-info-heading">制作について</h4>
+            <p id="modal-points" class="modal-info-text"></p>
+
+            <a id="modal-link" href="#" class="modal-btn btn" target="_blank" rel="noopener noreferrer">View site</a>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <!-- ヘッダー -->
+    <header class="header">
+        <div class="header__inner inner">
+        <button class="menu-button" aria-controls="header__nav" aria-expanded="false" aria-label="メニューを開閉">
+            <span class="menu-button__line"></span>
+        </button>
+        <nav id="header__nav" class="header__nav">
+            <ul class="header__nav-list">
+            <li class="header__nav-item"><a href="#home">HOME</a></li>
+            <li class="header__nav-item"><a href="#works">WORKS</a></li>
+            <li class="header__nav-item"><a href="#profile">PROFILE</a></li>
+            <li class="header__nav-item"><a href="#contact">CONTACT</a></li>
+            </ul>
+        </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- ヒーローエリア -->
+        <section id="home" class="section hero" aria-label="ホーム">
+        <div class="hero__inner inner">
+            <h3 class="hero__info">デザイン・Webサイト制作</h3>
+            <h1 class="hero__title">Sen design</h1>
+            <h2 class="hero__subtitle">portfolio</h2>
+        </div>
+        </section>
+
+        <!-- WORKS -->
+        <section id="works" class="section works" aria-label="制作実績">
+        <div class="contents-container">
+            <h2 class="section-title">WORKS</h2>
+                <!-- Website -->
+                <div class="works__inner">
+                    <h3 class="works__item-category">Website</h3>
+                    <div class="works__items">
+                        <button class="works__item" type="button"
+                        data-modal-title="架空古着店のWebサイト"
+                        data-modal-image="img/works4-full.png"
+                        data-modal-tools="Figma / STUDIO"
+                        data-modal-points="Webサイト制作ツール「STUDIO」で制作しました。レスポンシブ対応済み。googleマップやお問合せフォームといった機能を追加しています。管理画面から記事を簡単に登録でき、更新情報は「News」セクションに掲載されるようになっています。"
+                        data-modal-link="https://www.example.com"
+                        data-has-link="true"
+                        aria-label="古着店のWebサイト制作例（クリックで詳細表示）">
+                        <img src="img/works4.png" alt="古着店のWebサイト制作例のサムネイル" loading="lazy" decoding="async" />
+                        </button>
+
+                        <button class="works__item" type="button"
+                        data-modal-title="架空家具店のWebサイト"
+                        data-modal-image="img/works3-full.png"
+                        data-modal-tools="HTML / CSS (Sass) / JavaScript"
+                        data-modal-points="デザインカンプを元に、コーディングしました。Scssを使用。レスポンシブ対応済み。全体の上品な雰囲気が引き立つよう、緩やかなアニメーションを加えています。"
+                        data-modal-link="https://www.example.com"
+                        data-has-link="true"
+                        aria-label="家具店のWebサイト制作例（クリックで詳細表示）">
+                        <img src="img/works3.png" alt="家具店のWebサイト制作例のサムネイル" loading="lazy" decoding="async" />
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Graphic design -->
+                <div class="works__inner">
+                    <h3 class="works__item-category">Graphic design</h3>
+                    <div class="works__items">
+                        <button class="works__item" type="button"
+                        data-modal-title="バナー、サムネイルの制作例"
+                        data-modal-image="img/works7-full.png"
+                        data-modal-image2="img/works6-full.png"
+                        data-modal-tools="Canva"
+                        data-modal-points="情報の優先順位を明確にしパッと見て伝わること、クリックをいかに促せるか、情報伝達と感情訴求の両面を大切に制作しています。"
+                        data-has-link="false"
+                        aria-label="Web画像制作例（クリックで詳細表示）">
+                        <img src="img/works6.png" alt="Web画像制作例のサムネイル" loading="lazy" decoding="async" />
+                        </button>
+
+                        <button class="works__item" type="button"
+                        data-modal-title="印刷物の制作例"
+                        data-modal-image="img/works5-full.png"
+                        data-modal-tools="Canva"
+                        data-modal-points="誰がどこでいつ手に取るのか、見てどう感じどう行動してほしいのか、目的から降ろしたデザイン設計を大切に制作しています。"
+                        data-has-link="false"
+                        aria-label="印刷物制作例（クリックで詳細表示）">
+                        <img src="img/works5.png" alt="印刷物制作例のサムネイル" loading="lazy" decoding="async" />
+                        </button>
+                    </div>
+                </div>
+        </div>
+        </section>
+
+        <!-- SERVICE -->
+        <section id="service" class="section service" aria-label="提供サービス">
+        <div class="contents-container">
+            <h2 class="section-title">SERVICE</h2>
+            <div class="services">
+            <div class="service__item">
+                <h3 class="service__item-title">Webサイト制作</h3>
+                <img src="img/service1.png" alt="Webサイト制作サービスのアイコン" loading="lazy" decoding="async" />
+                <p class="service__item-info">企業や店舗のWebサイトを、デザインからコーディングまで制作します。レスポンシブ対応済み。</p>
+            </div>
+
+            <div class="service__item">
+                <h3 class="service__item-title">Web画像制作</h3>
+                <img src="img/service2.png" alt="Web画像制作サービスのアイコン" loading="lazy" decoding="async" />
+                <p class="service__item-info">SNS投稿用画像やバナー広告などを制作します。イベント告知、新サービスの宣伝などに活用いただけます。</p>
+            </div>
+
+            <div class="service__item">
+                <h3 class="service__item-title">印刷物デザイン</h3>
+                <img src="img/service3.png" alt="印刷物デザインサービスのアイコン" loading="lazy" decoding="async" />
+                <p class="service__item-info">チラシやPOP、名刺やショップカードなどを制作します。印刷をご希望の場合はご相談ください。</p>
+            </div>
+            </div>
+        </div>
+        </section>
+
+        <!-- PROFILE -->
+        <section id="profile" class="section profile" aria-label="プロフィール">
+        <div class="contents-container">
+            <h2 class="section-title">PROFILE</h2>
+            <div class="profile__inner">
+                <div class="profile__block"></div>
+                <div class="profile__info">
+                    <h3 class="profile__name">まる（センデザイン）</h3>
+                    <p class="profile__description">
+                    徳島県出身在住<br />
+                    ・学歴：県立広島女子大学国際文化学部卒業<br />
+                    ・職歴：飲食店（ふぐかに専門店店長、イタリアン）<br />
+                    小売店（珈琲豆・輸入食材販売）<br />
+                    現在はドラッグストアでのパートと並行してWeb制作<br />
+                    ・資格：調理師、ふぐ調理師、アロマテラピー検定一級、
+                    医療事務、調剤事務、登録販売者
+                    </p>
+                    <p class="profile__text">
+                    病を患ったことをきっかけに働き方を見直し、プログラミングとデザインを学習。<br />
+                    より成果に繋がる制作を目指し、さらなる知識や技術の学びを継続しています。
+                    </p>
+                </div>
+            </div>
+        </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact" class="section contact" aria-label="お問い合わせ">
+        <div class="contents-container">
+            <div class="contact__inner">
+                <h2 class="section-title">CONTACT</h2>
+                <p class="contact__text">ご依頼・ご相談は以下のXアカウントかメールアドレスまでお願いいたします。</p>
+                <div class="contact__info">
+                    <a href="https://x.com/c_kotoba" class="contact__info-item" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-x-twitter"></i>
+                        <span class="contact__info-text">@c_kotoba</span>
+                    </a>
+                    <a href="mailto:kangawac@gmail.com" class="contact__info-item">
+                        <i class="fa-regular fa-envelope"></i>
+                        <span class="contact__info-text">kangawac@gmail.com</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        </section>
+    </main>
+
+    <!-- フッター -->
+    <footer class="footer">
+        <p class="footer__text">© 2025 Sen design</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/modal.js"></script>
+</body>
+</html>

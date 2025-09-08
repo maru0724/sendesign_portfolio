@@ -1,0 +1,32 @@
+@use 'variables' as *;
+
+$breakpoints: (
+  sm: 480px,   // スマホ（小）
+  md: 768px,   // タブレット（縦）
+  lg: 1024px,  // タブレット（横）や小さめノートPC
+  xl: 1280px   // 大きめデスクトップ
+) !default;
+
+// min-width のメディアクエリ
+@mixin mq($breakpoint: md) {
+    $value: map-get($breakpoints, $breakpoint);
+    @if $value {
+        @media screen and (min-width: #{$value}) {
+        @content;
+        }
+    } @else {
+        @warn "ブレイクポイント `#{$breakpoint}` は $breakpoints に存在しません。";
+    }
+}
+
+// max-width のメディアクエリ
+@mixin mq-max($breakpoint: md) {
+    $value: map-get($breakpoints, $breakpoint);
+    @if $value {
+        @media screen and (max-width: #{$value}) {
+        @content;
+        }
+    } @else {
+        @warn "ブレイクポイント `#{$breakpoint}` は $breakpoints に存在しません。";
+    }
+}
